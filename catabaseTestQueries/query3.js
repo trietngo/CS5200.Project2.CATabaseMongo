@@ -8,7 +8,7 @@ async function run() {
     const database = client.db('catabase');
     const cats = database.collection('cats');
 
-    // Query 3: Count the number of cats applied by user named Martina Maldin
+    // Query 3: Count the number of cats applied for by user named Marian Malthus
 
     const cursor = await cats.aggregate(
         [
@@ -16,13 +16,13 @@ async function run() {
             {
                 $match: {
                     'adoption_details.user_first_name':
-                    'Martina',
+                    'Marian',
                     'adoption_details.user_last_name':
-                    'Maldin'
+                    'Malthus'
                 }
             },
             {
-                $count: 'Number of cats applied for by Martina Maldin'
+                $count: 'Number of cats applied for by Marian Malthus'
             }
           ],
           { maxTimeMS: 60000, allowDiskUse: true }

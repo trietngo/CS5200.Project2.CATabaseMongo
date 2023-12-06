@@ -8,7 +8,7 @@ async function run() {
     const database = client.db('catabase');
     const cats = database.collection('cats');
 
-    // Query 5: Create a Protential Adopters Collection from the Cats Collection
+    // Query 5: Create a Potential Adopters Collection from the Cats Collection
 
     const cursor = await cats.aggregate(
         [

@@ -8,17 +8,17 @@ async function run() {
     const database = client.db('catabase');
     const cats = database.collection('cats');
 
-    // Query 4: Find a Sphynx cat named "Matsoft" with an organized personality
-    // and disapprove their current adoption status
+    // Query 4: Find a Siamese cat named "Otcom" with a patient personality
+    // and approve their current adoption status
 
     await cats.updateOne(
         {
-            cat_name: "Matsoft", cat_breed: "Sphynx", cat_personality: "Organized",
+            cat_name: "Otcom", cat_breed: "Siamese", cat_personality: "Patient",
             "adoption_details.user_id" : {$exists: true}
         },
         {
             $set: {
-                "adoption_details.$.adoption_approved": false
+                "adoption_details.$.adoption_approved": true
             }
         }
     );
