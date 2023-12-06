@@ -63,7 +63,30 @@
             <div class="form-group row">
                 <label for="catShelter" class="col-sm-2 col-form-label">Shelter</label>
                 <div class="col-sm-6">
+
                     <input type="text" readonly class="form-control" id="catShelter" value="<%= catInd.shelter.shelter_name %>">
+
+                    <!--
+                        <select name="catShelter" id="catShelter" class="form-select form-select-lg mb-3" aria-label=".form-select-sm example">
+
+                            <% shelters.forEach(function(shelter) { %>
+
+                                <% if (catInd.shelter.shelter_id == shelter.shelter_id) { %>
+
+                                    <option selected value="<%= shelter.shelter_id %>"><%= shelter.shelter_name %></option>
+                                
+                                <% } else { %>
+                                    
+                                    <option value="<%= shelter.shelter_id %>"><%= shelter.shelter_name %></option>
+
+                                <% }; %>
+
+                            <% }); %>
+
+                        </select>
+                    -->
+
+                    
                 </div>
             </div>
 

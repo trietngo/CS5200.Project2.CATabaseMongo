@@ -7,13 +7,13 @@ let logger = require('morgan');
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
 
-let mongoose = require('mongoose');
+let mongoose = require("mongoose");
 
 const CONNECTION_STRING = 'mongodb://localhost:27017/catabase';
 
 mongoose.connect(CONNECTION_STRING);
 
-let app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

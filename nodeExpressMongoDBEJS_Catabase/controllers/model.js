@@ -1,8 +1,17 @@
 const mongoose = require('mongoose');
-const { catabaseSchema } = require("./schema")
+const { catabaseSchema, catSchemaLite, userSchema, shelterSchema } = require("./schema")
 
 const catabaseModel = mongoose.model("Cats", catabaseSchema);
 
+const catModelLite = mongoose.model("CatsLite", catSchemaLite)
+
+const userModel = mongoose.model("Users", userSchema);
+
+const shelterModel = mongoose.model("Shelters", shelterSchema);
+
 module.exports = {
-    catabaseModel
+    catabaseModel,
+    catModelLite,
+    userModel,
+    shelterModel
 }
