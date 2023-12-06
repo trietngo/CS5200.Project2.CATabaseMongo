@@ -1,4 +1,5 @@
 Project 2: Catabase App, made using Node.js, Express, EJS, and MongoDB + Mongoose.
+Feature: Full CRUD Operations on Users and Shelters pages
 
 How to run test queries:
 1. Use MongoDB Compass or on the mongosh shell. Make sure the port is localhost:27017
