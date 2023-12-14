@@ -127,7 +127,7 @@ router.post('/shelters/:shelterId', async function(req, res, next) {
   
   console.log(req.body);
   
-  const shelterId = parseInt(req.body.shelterId);
+  const shelterId = req.body.shelterID;
   const shelterName = req.body.shelterName;
   const shelterLocation = req.body.shelterLocation;
   const shelterEmail = req.body.shelterEmail;
@@ -203,7 +203,7 @@ router.post('/users/:userId', async function(req, res, next) {
   
   console.log(req.body);
   
-  const userId = parseInt(req.body.userId);
+  const userId = req.body.userId;
   const userFname = req.body.userFname;
   const userLname = req.body.userLname;
   const userAddress = req.body.userAddress;
@@ -240,8 +240,6 @@ router.get('/userCreate', async function(req, res, next) {
 });
 
 router.post('/userCreate/new', async function(req, res, next) { 
-
-  console.log(req.body);
   
   const userFname = req.body.userFname;
   const userLname = req.body.userLname;
